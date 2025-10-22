@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet Butani · Supply Chain & Inventory Analyst — Portfolio</title>
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --panel: #12141a;
+      --ink: #e8eaed;
+      --muted: #aab4be;
+      --accent: #4fd1c5; /* teal */
+      --accent-2: #7c83ff; /* indigo */
+      --chip: #1b1f2a;
+      --good: #3ddc97;
+      --warn: #ffb020;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    [data-theme="light"]{
+      --bg:#f7f9fc; --panel:#ffffff; --ink:#0f172a; --muted:#4b5563; --chip:#eef2ff; --shadow:0 10px 24px rgba(2,6,23,.08);
+    }
+    html,body{height:100%}
+    body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--ink); line-height:1.55}
+    a{color:var(--accent)}
+    .container{max-width:1040px; margin:auto; padding:28px 20px 60px}
+    header{position:sticky; top:0; backdrop-filter:saturate(150%) blur(8px); background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0)); z-index:50}
+    .toolbar{display:flex; align-items:center; gap:12px; justify-content:flex-end; padding:10px 0}
+    .btn{border:1px solid rgba(255,255,255,.15); background:var(--panel); color:var(--ink); padding:8px 12px; border-radius:12px; cursor:pointer; box-shadow:var(--shadow); font-weight:600}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{display:grid; grid-template-columns: 140px 1fr; gap:20px; background:linear-gradient(135deg, rgba(79,209,197,.15), rgba(124,131,255,.12)); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:22px; box-shadow:var(--shadow)}
+    .avatar{width:120px; height:120px; border-radius:18px; background:var(--panel); border:1px dashed rgba(255,255,255,.2); display:grid; place-items:center; font-size:12px; color:var(--muted)}
+    h1{margin:0 0 6px; font-size:28px}
+    .subtitle{color:var(--muted); font-size:14px; margin-top:2px}
+    .contact{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
+    .chip{background:var(--chip); color:var(--ink); padding:6px 10px; border-radius:999px; font-size:12px; border:1px solid rgba(255,255,255,.08)}
+    .grid{display:grid; gap:16px}
+    .col-2{grid-template-columns: 1.1fr .9fr}
+    .panel{background:var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:18px; box-shadow:var(--shadow)}
+    h2{font-size:18px; margin:0 0 12px}
+    h3{font-size:15px; margin:0 0 6px}
+    p{margin:8px 0}
+    ul{margin:8px 0 0 20px}
+    .highlights{display:grid; grid-template-columns: repeat(5, 1fr); gap:12px; margin-top:14px}
+    .card{background:var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:14px; box-shadow:var(--shadow)}
+    .metric{font-size:22px; font-weight:800}
+    .metric small{font-size:12px; font-weight:600; color:var(--muted)}
+    .tagline{color:var(--muted); font-size:12px; margin-top:4px}
+    .exp{display:grid; gap:14px}
+    .exp-item{display:grid; grid-template-columns: 1fr auto; gap:6px; padding:12px; border-radius:14px; border:1px solid rgba(255,255,255,.08); background:linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
+    .exp-item .role{font-weight:700}
+    .exp-item .time{color:var(--muted); font-size:12px}
+    .bullets{margin:8px 0 0 18px}
+    .skills{display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px}
+    .skill{display:grid; gap:6px}
+    .bar{height:8px; background:#263142; border-radius:999px; overflow:hidden}
+    .bar > span{display:block; height:100%; background:linear-gradient(90deg, var(--accent), var(--accent-2))}
+    .skill small{color:var(--muted)}
+    .project{display:grid; gap:8px; padding:14px; border:1px solid rgba(255,255,255,.08); border-radius:14px}
+    .project h3{display:flex; align-items:center; justify-content:space-between}
+    .pill{font-size:11px; background:var(--chip); padding:4px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.08)}
+    .footer{margin-top:28px; display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:12px}
+    @media print{
+      header{display:none}
+      body{background:white; color:black}
+      .panel, .card, .exp-item, .project{box-shadow:none; border:1px solid #e5e7eb}
+      .chip{background:#eef2ff}
+    }
+    @media (max-width: 820px){
+      .hero{grid-template-columns:1fr}
+      .highlights{grid-template-columns:1fr 1fr}
+      .col-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container toolbar">
+      <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
+      <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="avatar">Add<br/>Headshot</div>
+      <div>
+        <h1>Meet Butani</h1>
+        <div class="subtitle">Supply Chain & Inventory Analyst · ERP | Forecasting | Data Analytics</div>
+        <div class="contact" aria-label="contact">
+          <span class="chip">Dallas, TX · Open to Immediate Start</span>
+          <a class="chip" href="tel:+17144174046">+1 (714) 417-4046</a>
+          <a class="chip" href="mailto:meetbutani.k@gmail.com">meetbutani.k@gmail.com</a>
+          <a class="chip" href="#" onclick="alert('Add your LinkedIn URL');">LinkedIn</a>
+          <a class="chip" href="#projects">Case Studies</a>
+        </div>
+        <p class="subtitle" style="margin-top:10px">Proactive and analytical analyst with 5+ years across manufacturing, procurement, inventory optimization, and global logistics. Experienced with SAP/Oracle, demand forecasting, KPI dashboards, and Lean/Six Sigma to lower costs and improve service reliability.</p>
+      </div>
+    </section>
+    <section style="margin-top:18px">
+      <div class="highlights">
+        <div class="card"><div class="metric">12%<small> / yr</small></div><div class="tagline">Procurement & logistics cost reduction</div></div>
+        <div class="card"><div class="metric">20%</div><div class="tagline">Stockout reduction via forecasting</div></div>
+        <div class="card"><div class="metric">18%</div><div class="tagline">Shipment delay reduction</div></div>
+        <div class="card"><div class="metric">40</div><div class="tagline">Hours saved / month with automation</div></div>
+        <div class="card"><div class="metric">20%</div><div class="tagline">Trial setup time improvement</div></div>
+      </div>
+    </section>
+    <div class="grid col-2" style="margin-top:16px">
+      <section class="panel">
+        <h2>Experience</h2>
+        <div class="exp">
+          <div class="exp-item">
+            <div>
+              <div class="role">Supply Chain & Inventory Analyst — CPP Foundation Dining Services</div>
+              <div class="subtitle">Pomona, CA</div>
+            </div>
+            <div class="time">Aug 2022 – Dec 2024</div>
+            <ul class="bullets">
+              <li>Planned & forecasted to meet sales demand; improved customer satisfaction.</li>
+              <li>Coordinated with sales/logistics/finance/manufacturing for launches & lifecycle control.</li>
+              <li>Built Excel dashboards & forecasting to track lead time, availability & KPIs.</li>
+              <li>Reduced trial setup time by 20% and increased on-time equipment returns.</li>
+              <li>Managed ERP inventory transactions for accurate stock & compliant reconciliations.</li>
+              <li>Led asset tracking & inventory optimization across multi-system environment.</li>
+              <li>Created SQL/Excel KPI reports, cutting decision time for stakeholders.</li>
+            </ul>
+          </div>
+          <div class="exp-item">
+            <div>
+              <div class="role">Supply Chain Analyst — Kadson Group of Companies</div>
+              <div class="subtitle">Rajkot, India</div>
+            </div>
+            <div class="time">Jun 2019 – Jul 2022</div>
+            <ul class="bullets">
+              <li>Owned end‑to‑end planning for manufacturer (>$50M budget) ensuring material continuity.</li>
+              <li>Deployed SAP & Excel forecasting models; reduced annual stockouts by 20%.</li>
+              <li>Negotiated with 30+ domestic & global suppliers; achieved ~12% cost reduction.</li>
+              <li>Built automated KPI dashboards (inventory turns, OTIF, supplier scorecards) saving ~40 hrs/mo.</li>
+              <li>Cut excess inventory by 15% while maintaining >95% service level.</li>
+              <li>Coordinated demand/capacity/export shipments; reduced shipment delays by 18%.</li>
+              <li>Trained juniors on ERP workflows, forecasting, & reconciliation to scale data culture.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <aside class="panel">
+        <h2>Core Competencies & Tools</h2>
+        <div class="skills">
+          <div class="skill"><div>ERP Systems — SAP, Oracle</div><div class="bar"><span style="width:90%"></span></div><small>Inventory, procurement, reconciliation</small></div>
+          <div class="skill"><div>Data Tools — SQL Server, Excel, Power BI</div><div class="bar"><span style="width:92%"></span></div><small>Power Query, PivotTables, KPI design</small></div>
+          <div class="skill"><div>Forecasting & Planning</div><div class="bar"><span style="width:85%"></span></div><small>Demand models, stock coverage</small></div>
+          <div class="skill"><div>Lean & Six Sigma</div><div class="bar"><span style="width:80%"></span></div><small>Waste removal, cycle-time reduction</small></div>
+          <div class="skill"><div>Global Logistics</div><div class="bar"><span style="width:78%"></span></div><small>OTIF, export/import coordination</small></div>
+          <div class="skill"><div>Business Tools</div><div class="bar"><span style="width:88%"></span></div><small>PowerPoint, Word, Outlook</small></div>
+        </div>
+        <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:8px">
+          <span class="pill">KPI Dashboards</span>
+          <span class="pill">Process Documentation</span>
+          <span class="pill">TMS Familiarity</span>
+          <span class="pill">Data Modeling/Warehousing</span>
+          <span class="pill">Python (basics)</span>
+        </div>
+      </aside>
+    </div>
+    <section id="projects" class="panel" style="margin-top:16px">
+      <h2>Case Studies & Selected Projects</h2>
+      <article class="project">
+        <h3>
+          A. Inventory Optimization Dashboard (Excel + Power BI)
+          <span class="pill">CPP Dining</span>
+        </h3>
+        <p><strong>Goal:</strong> Real-time inventory & lead-time visibility integrated with ERP extracts.</p>
+        <ul>
+          <li>Created KPI views for lead time, stock coverage, and forecast variance using Power Query.</li>
+          <li>Automated refresh to cut ~30+ hours/month of manual reporting.</li>
+          <li>Improved decision speed for leadership by ~20% (time-to-insight).</li>
+        </ul>
+        <p><em>Insert screenshots:</em> charts for Inventory Turns, Coverage Days, OTIF.</p>
+      </article>
+      <article class="project">
+        <h3>
+          B. Procurement Cost-Reduction Initiative (SAP)
+          <span class="pill">Kadson Group</span>
+        </h3>
+        <p><strong>Goal:</strong> Optimize vendor contracts & reduce material spend.</p>
+        <ul>
+          <li>Analyzed spend & lead-time across 30+ suppliers using SAP exports + Excel PQ.</li>
+          <li>Introduced supplier scorecards (price, OTIF, defects) to inform negotiations.</li>
+          <li><strong>Impact:</strong> ~12% annual cost reduction; shipment delays down 18%.</li>
+        </ul>
+        <p><em>Insert visuals:</em> before/after cost trend, supplier ranking table.</p>
+      </article>
+      <article class="project">
+        <h3>
+          C. Lean Trial-Setup Streamlining
+          <span class="pill">CPP Dining</span>
+        </h3>
+        <p><strong>Goal:</strong> Reduce cycle time & errors for equipment trial setups.</p>
+        <ul>
+          <li>Mapped current vs future workflow, removing non‑value‑add steps.</li>
+          <li>Linked Excel tracking template to ERP inventory transactions.</li>
+          <li><strong>Result:</strong> 20% faster setup; improved on‑time returns.</li>
+        </ul>
+        <p><em>Insert visuals:</em> before/after process map (SIPOC or swimlanes).</p>
+      </article>
+      <article class="project">
+        <h3>
+          D. Automated KPI Pack (SQL + Excel)
+          <span class="pill">Kadson Group</span>
+        </h3>
+        <p><strong>Goal:</strong> Replace manual reports with a weekly auto‑refresh pack.</p>
+        <ul>
+          <li>SQL queries for demand vs. capacity, inventory turns, and slow movers.</li>
+          <li>Excel Power Query pipelines with standardized data validation.</li>
+          <li><strong>Saved ~40 hours/month</strong> of manual effort across teams.</li>
+        </ul>
+        <p><em>Insert visuals:</em> Pareto of slow movers, OTIF trend, lead-time histogram.</p>
+      </article>
+    </section>
+    <div class="grid col-2" style="margin-top:16px">
+      <section class="panel">
+        <h2>Education</h2>
+        <h3>California State Polytechnic University, Pomona — MS Computer Science (STEM)</h3>
+        <p class="subtitle">Aug 2022 – Dec 2024 · GPA 3.29</p>
+        <h3>Marwadi University — BE Computer Science & Engineering</h3>
+        <p class="subtitle">Jun 2018 – Jun 2022 · GPA 3.30</p>
+        <h3>Academic Highlights</h3>
+        <ul>
+          <li>Performance Evaluation of 5Greplay on 5G Network (fuzzing, Wireshark, Open5GS/Free5GC)</li>
+          <li>Dining Management System (Java/JSP + Hibernate ORM + PostgreSQL, MVC)</li>
+        </ul>
+      </section>
+      <aside class="panel">
+        <h2>Certifications</h2>
+        <ul>
+          <li>AWS Academy Graduate — Cloud Foundations</li>
+          <li>SAP Certified Application Associate — <em>In Process</em></li>
+        </ul>
+        <h2 style="margin-top:12px">Download</h2>
+        <p>
+          <a class="chip" href="#" onclick="window.print()">Save this portfolio as PDF</a>
+        </p>
+      </aside>
+    </div>
+    <section class="footer">
+      <span>© <span id="year"></span> Meet Butani</span>
+      <span>·</span>
+      <span>Contact: <a href="mailto:meetbutani.k@gmail.com">meetbutani.k@gmail.com</a></span>
+      <span>·</span>
+      <span>Dallas, TX</span>
+    </section>
+  </main>
+  <script>
+    const yearEl = document.getElementById('year');
+    if(yearEl) yearEl.textContent = new Date().getFullYear();
+    function toggleTheme(){
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? null : 'light';
+      if(next){ document.documentElement.setAttribute('data-theme','light'); }
+      else{ document.documentElement.removeAttribute('data-theme'); }
+    }
+  </script>
+</body>
+</html>
